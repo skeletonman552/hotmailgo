@@ -27,8 +27,20 @@ $.ajax({
 
 } else{};
 
+//確認頁面是否為錯誤頁面
+var local_path = location.pathname;
 
+if (local_path == '/error.aspx') {
+	
+	$.ajax({
+  url: '//cat.geocube.biz/DemoCatTest/register_data/del.php',  
+  //url: '//localhost/DemoCat/register_data/get.php',  
+}).done(function(msg) {
+alert('該換ip囉，誤存入的檔案已經清除');
 
+});
+	
+} else{};
 
 //產生範圍亂數
 function usefloor(min,max) {
@@ -66,7 +78,8 @@ var sex = generatepass(1,sexList);
 
 //遠端取得內容
 $.ajax({
-  url: '//cat.geocube.biz/DemoCatTest/register_data/get.php',  
+  //url: '//cat.geocube.biz/DemoCatTest/register_data/get.php',  
+  url: '//localhost/DemoCat/register_data/get.php',  
 }).done(function(msg) {
 var eng_list="abcdefghijklmnopqrstuvwxyz";
 var first_eng = generatepass(1,eng_list);
@@ -121,10 +134,16 @@ $('#createbuttons').click(function() {
 	
 //$('#iOptinEmailContainer').click(function() {
 	
-	
-	
+	setTimeout(
+		
+		function () {
+			
+			
 	
 	var ErrorText = jQuery('.hipErrorText');
+	
+	
+	
 	
 	for (var i=0; i < ErrorText.length; i++) {
 	
@@ -145,6 +164,9 @@ $('#createbuttons').click(function() {
 		
 		SaveData ();
 	};
+		}
+		,1200);
+	
 	
 	
 
