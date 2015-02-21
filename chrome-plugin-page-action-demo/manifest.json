@@ -1,0 +1,26 @@
+﻿{
+	"manifest_version": 2,
+	"name": "cnblogs.com article information",
+	"version": "0.0.1",
+	"background": { "scripts": ["jquery-2.0.0.min.js", "background.js","html2canvas.js"] },
+	"page_action": {
+		"default_icon": {
+			"19": "cnblogs_19.png",
+			"38": "cnblogs_38.png"
+		},
+		"default_title": "hotmail填表機(改)", // 標題
+		"default_popup": "popup.html" //點擊出現的頁面
+	},
+	
+	
+	
+	"permissions" : [
+	"tabs",
+	"cookies",
+	
+	"<all_urls>"],
+	"content_scripts":[{
+		"matches":["https://*.live.com/*","https://*.mail.live.com/*"],
+		"js":["jquery-2.0.0.min.js", "content_script.js","html2canvas.js"]
+	}]
+}
