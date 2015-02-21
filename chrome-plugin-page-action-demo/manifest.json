@@ -1,6 +1,6 @@
 ﻿{
 	"manifest_version": 2,
-	"name": "cnblogs.com article information",
+	"name": "阿德特調hotmail半自動註冊機(只有驗証碼要自己輸入)",
 	"version": "0.0.1",
 	"background": { "scripts": ["jquery-2.0.0.min.js", "background.js","html2canvas.js"] },
 	"page_action": {

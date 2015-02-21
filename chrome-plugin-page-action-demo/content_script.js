@@ -78,8 +78,8 @@ var sex = generatepass(1,sexList);
 
 //遠端取得內容
 $.ajax({
-  //url: '//cat.geocube.biz/DemoCatTest/register_data/get.php',  
-  url: '//localhost/DemoCat/register_data/get.php',  
+  url: '//cat.geocube.biz/DemoCatTest/register_data/get.php',  
+ // url: '//localhost/DemoCat/register_data/get.php',  
 }).done(function(msg) {
 var eng_list="abcdefghijklmnopqrstuvwxyz";
 var first_eng = generatepass(1,eng_list);
