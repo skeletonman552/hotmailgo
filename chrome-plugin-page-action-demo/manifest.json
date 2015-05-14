@@ -17,10 +17,14 @@
 	"permissions" : [
 	"tabs",
 	"cookies",
+	"http://localhost/",
 	
 	"<all_urls>"],
 	"content_scripts":[{
-		"matches":["https://*.live.com/*","https://*.mail.live.com/*"],
-		"js":["jquery-2.0.0.min.js", "content_script.js","html2canvas.js"]
+		"matches":["https://*.live.com/*","https://*.mail.live.com/*","https://*.microsoft.com/"],
+		"js":[
+		"jquery-2.0.0.min.js", 
+		"content_script.js",
+		"html2canvas.js"]
 	}]
 }

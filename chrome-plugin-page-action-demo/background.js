@@ -31,3 +31,4 @@ function checkForValidUrl(tabId, changeInfo, tab) {
 
 
 chrome.tabs.onUpdated.addListener(checkForValidUrl); //到達網域就開始顯示圖示
+
